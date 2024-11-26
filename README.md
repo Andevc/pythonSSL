@@ -23,4 +23,10 @@ luego en una terminal diferente
 ``` 
 $ python3 client.py
 ```
+### Parte Web
+Para ver que el protocolo es HTTPS en el navegador se ejecuta: 
+
+``` 
+$ python3 app.py
+```
 
