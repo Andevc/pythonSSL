@@ -1,12 +1,14 @@
-from flask import Flask # type: ignore
+from flask import Flask, render_template 
+
+from config import CERTFILE, KEYFILE
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Hola con HTTPS :3 "
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
-    app.run(ssl_context=('ssl/web/server_web.crt', 'ssl/web/server_web.key'), debug=True)
+    app.run(ssl_context=(CERTFILE, KEYFILE), debug=True)
 

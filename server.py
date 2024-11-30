@@ -1,11 +1,7 @@
 import socket
 import ssl
 
-CERTFILE = 'ssl/tcp/server_tcp.crt'
-KEYFILE = 'ssl/tcp/server_tcp.key'
-
-HOST = 'localhost'
-PORT = 5000
+from config import HOST, PORT, CERTFILE, KEYFILE
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.bind((HOST, PORT))

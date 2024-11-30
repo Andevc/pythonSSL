@@ -1,12 +1,7 @@
 import socket
 import ssl
 
-# Ruta del certificado del servidor (opcional para pruebas locales)
-CERTFILE = 'ssl/tcp/server_tcp.crt'
-
-# Configuración del cliente
-HOST = "localhost"
-PORT = 5000
+from config import HOST, PORT, CERTFILE
 
 # Crear el socket del cliente
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
